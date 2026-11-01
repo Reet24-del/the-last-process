@@ -25,6 +25,15 @@ export default function FileReader({
         <span className="read-only">read only</span>
       </header>
       <div className={`document ${farewell ? "farewell" : ""}`}>
+        {!farewell && (
+          <h2 className="file-title">
+            {
+              ["The returning signal", "What remains", "The last heartbeat"][
+                selected
+              ]
+            }
+          </h2>
+        )}
         {farewell ? (
           <>
             <span className="document-label">The last recovered file</span>
@@ -111,7 +120,8 @@ export default function FileReader({
               disabled={busy}
             />
             <button className="primary" disabled={busy || !answer.trim()}>
-              {busy ? "Reading…" : "Submit"}
+              {busy ? "Reading…" : "Submit answer"}{" "}
+              {!busy && <Icon name="arrow" />}
             </button>
           </div>
         </form>

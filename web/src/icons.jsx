@@ -2,6 +2,7 @@ import React from "react";
 
 export function Icon({ name, ...props }) {
   const paths = {
+    back: <path d="M20 12H4m6-6-6 6 6 6" />,
     file: (
       <>
         <path d="M6 3h8l4 4v14H6z" />

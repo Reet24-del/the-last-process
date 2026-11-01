@@ -35,6 +35,17 @@ export default function FileExplorer({ game, selected, onSelect }) {
         <br />
         as you left it.
       </p>
+      <div className="archive-progress">
+        <span>Recovery {game.stage} / 3</span>
+        <div
+          className="progress"
+          aria-label={`${game.stage} of 3 puzzles recovered`}
+        >
+          {[0, 1, 2].map((index) => (
+            <span key={index} className={index < game.stage ? "done" : ""} />
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }

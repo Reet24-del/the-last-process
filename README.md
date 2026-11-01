@@ -8,6 +8,10 @@ A short haunted-browser escape room about the difference between preserving a me
 
 This is a new project, separate from Report Navigator. Everything in the desktop is fiction. It never accesses your files or executes terminal commands.
 
+## Post-submission update — November 1, 2026
+
+The cinematic frontend redesign was published after the contest cutoff (12:29 PM IST). It adds a spooky landing page, original observatory artwork, chat bubbles with saved conversation history, clearer typography, responsive layouts, reduced-motion support, and opt-in procedural ambient sound. The original game and DEV submission were already published before the cutoff. These visual and audio improvements are post-submission changes.
+
 ## Play
 
 Play at **https://the-last-process.onrender.com**. The local build runs at **http://127.0.0.1:8010**. The public app runs on Render's free plan and may take a minute to wake after inactivity.
@@ -61,7 +65,7 @@ scripts/
   generate_casebook.py  Ultramarine writing and usage ledger
 web/
   src/               Small React components, API client and design tokens
-  public/assets/     Generated resident portrait
+  public/assets/     Original generated resident portrait and observatory scene
 tests/               Game, API, provider and casebook tests
 docs/                Submission draft and integration evidence
 ```
