@@ -2,6 +2,8 @@
 
 Reviewed locally on November 1, 2026. This is a playable local build, not a completed challenge submission.
 
+Follow-up: the repository was published, and Ultramarine subsequently passed a live generation and API integration check. See `ULTRAMARINE_TEST.md` for evidence and usage accounting. The table below records the original first-version review.
+
 ## What is implemented
 
 | Part | Implementation | Evidence |

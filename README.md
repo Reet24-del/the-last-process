@@ -19,7 +19,7 @@ Ask the resident for help when stuck. Each request gives a progressively clearer
 ## What the AI does
 
 - **Gemma 4** (`gemma-4-26b-a4b-it`), hosted through Google's Gemini API, plays the resident and reacts to the current clue and your question. This uses Gemma, not a Gemini model. A server-only key is required for live dialogue.
-- **Ultramarine** (`ultramarine-1-flash`) has an optional build-time casebook writer. It creates three validated diary fragments without changing clues, answers, unlocks, or endings. Until a real generation is accepted, the game uses the authored story and labels it accordingly.
+- **Ultramarine** (`ultramarine-1-flash`) wrote the three validated diary fragments included in this build, without changing clues, answers, unlocks, or endings. The optional build-time writer records real token usage. See [live test evidence](docs/ULTRAMARINE_TEST.md). If a generated casebook is absent or invalid, the game falls back to the authored story and labels it accordingly.
 - **Deterministic Python** validates answers and controls progression. Model output is never treated as a command or unlock instruction.
 
 When a provider fails, the UI clearly labels the authored fallback. The authored hint remains available; there is no claim that a fallback was AI-generated. The complete puzzle game can run locally without an AI key. Live Gemma requires internet.
