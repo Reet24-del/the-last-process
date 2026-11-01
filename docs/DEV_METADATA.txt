@@ -1,0 +1,17 @@
+Title: The Last Process: I built a haunted desktop with Gemma
+
+Tags: devchallenge, hf26challenge, ai, opensource
+
+Body: Paste the entire contents of FINAL_DEV_POST.md into the DEV editor's article body. It deliberately has no YAML front matter because the standard editor has separate title and tag fields.
+
+Optional cover image: docs/assets/gameplay.png
+The same public image is already embedded in the article body.
+
+Categories explicitly listed in the article:
+- Best Use of Gemma
+- Best Use of Ultramarine
+- Best Use of Render
+
+Creator: Solo submission, as confirmed by the user. The DEV account byline identifies the author.
+
+Status: Final submission copy prepared. It has not been published or submitted on DEV.
