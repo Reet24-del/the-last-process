@@ -2,13 +2,15 @@
 
 **An abandoned desktop. One process still running.**
 
+[Play the live game](https://the-last-process.onrender.com) · [Interactive API docs](https://the-last-process.onrender.com/docs) · [Source code](https://github.com/Reet24-del/the-last-process)
+
 A short haunted-browser escape room about the difference between preserving a memory and keeping a machine waiting. Recover three files, speak to the resident, and decide how Mara's last process ends.
 
 This is a new project, separate from Report Navigator. Everything in the desktop is fiction. It never accesses your files or executes terminal commands.
 
 ## Play
 
-The local build runs at **http://127.0.0.1:8010**. Public deployment is pending; no production link is claimed yet.
+Play at **https://the-last-process.onrender.com**. The local build runs at **http://127.0.0.1:8010**. The public app runs on Render's free plan and may take a minute to wake after inactivity.
 
 1. Read `boot.log` and find the returning signal.
 2. Recover and decode `signal.txt`.
@@ -97,7 +99,7 @@ The generator uses the [official Ultramarine endpoint and model](https://docs.pa
 
 ## API
 
-Interactive Swagger UI: **http://127.0.0.1:8010/docs**. Schema: **http://127.0.0.1:8010/openapi.json**.
+Public Swagger UI: **https://the-last-process.onrender.com/docs**. Schema: **https://the-last-process.onrender.com/openapi.json**. The same paths are available locally at port 8010.
 
 | Endpoint | Purpose |
 | --- | --- |
@@ -123,7 +125,7 @@ Tests cover incorrect and stale answers, concurrent duplicate submissions, all t
 
 ## Deployment and limitations
 
-`render.yaml` selects a free Docker web service. **Deployment has not been completed yet.** Set the server-only `GEMINI_API_KEY` in the host's secret environment variables. Never place it in a `VITE_` variable. Health path: `/health`.
+The app is deployed as a free Docker web service on Render, matching `render.yaml`. A public end-to-end check verified live Gemma, the bundled Ultramarine diary, all three puzzles, an ending, resume, and Swagger. See [deployment evidence](docs/DEPLOYMENT.md). Set the server-only `GEMINI_API_KEY` in the host's secret environment variables for your own deployment. Never place it in a `VITE_` variable. Health path: `/health`.
 
 - Free Render services can sleep. Their local disk is ephemeral: redeployment or restart may erase game saves. A persistent database is needed for durable production saves.
 - Saves expire after 24 hours without activity; there are at most 500 stored sessions.

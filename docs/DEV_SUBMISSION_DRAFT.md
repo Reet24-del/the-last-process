@@ -18,7 +18,9 @@ That distinction is the heart of the project: the AI can make the room feel aliv
 
 ## Demo
 
-Public demo: pending deployment and verification.
+**[Play The Last Process](https://the-last-process.onrender.com)** · [Explore the API](https://the-last-process.onrender.com/docs)
+
+The free Render instance may need about a minute to wake after inactivity.
 
 The intended demo takes about a minute: trace the returning signal, decode a message, recover the last heartbeat time, and read Mara's final letter. Asking for help produces an in-character response alongside a reliable authored hint.
 
@@ -26,7 +28,7 @@ Sound starts off. There are no jump scares or real system commands. All people a
 
 ## Code
 
-Public repository: pending publication.
+**[Source code on GitHub](https://github.com/Reet24-del/the-last-process)**
 
 The application code is MIT licensed. Puzzle rules, provider calls, save storage and the React interface are separate modules. The repository includes tests and a one-service Docker build.
 
@@ -38,9 +40,9 @@ Gemma 4, through Google's Gemini API, receives the current fictional clue, the p
 
 I deliberately display the authored hint separately from generated dialogue. If the model is wrong or the provider is unavailable, the player still has a path forward. The interface labels fallback text instead of pretending a model call succeeded.
 
-An optional Ultramarine writer produces validated diary fragments at build time. Its schema accepts story paragraphs, not puzzle rules. This integration must be live-verified before it is included as a completed sponsor category.
+Ultramarine wrote the three diary fragments bundled with the deployed game. Its schema accepts story paragraphs and cannot replace puzzle rules. The first response failed validation and was rejected; the second passed the same validator and was reviewed before deployment. Both attempts are included in the usage ledger.
 
-Tests cover stale answers, concurrent submissions, progression, endings, limits, invalid generated writing and provider failure. Browser checks cover the whole game, save/resume and a narrow mobile viewport. Measured results and screenshots will be inserted after the final deployed build is verified.
+All 20 unit/API tests pass. They cover stale answers, concurrent submissions, progression, endings, limits, invalid generated writing and provider failure. Browser checks cover the whole game, save/resume and a narrow mobile viewport. The deployed API was also tested through a real Gemma hint, all three puzzle unlocks, the generated diary, an ending and resume. These are integration checks, not a general model-accuracy benchmark.
 
 I used Codex to assist implementation, tests and review, and ImageGen for the resident portrait and visual concept. The interactive desktop itself is native code, not a screenshot.
 
@@ -60,8 +62,8 @@ Both endings let the listener stop. One keeps the words. Neither asks a simulati
 
 ## Prize Categories
 
-- **Best Use of Gemma:** intended entry, pending final deployed live-call verification. Gemma plays the resident, reacts to the current clue and adds atmosphere to the help flow.
-- **Ultramarine:** include only after a real casebook generation is accepted, its usage ledger is reviewed, and the final category name and settled cost are confirmed.
-- **Hosting categories:** include only the services actually deployed and demonstrated in the final build.
+- **Gemma:** live-verified in the public app. Gemma plays the resident, reacts to the current clue and adds atmosphere to the help flow.
+- **Ultramarine:** wrote the deployed diary fragments. Two requests used 430 input tokens and 484 output tokens including reasoning, for a calculated cost of $0.00030650 USD at the documented rates. The repository includes the usage ledger; the settled console charge still needs confirmation before final submission.
+- **Render:** hosts the working React client and Python API in one free Docker service. The public game and `/docs` endpoint were verified.
 
 <!-- Final review must replace pending statements with evidence, remove unqualified categories and add the actual creator/team DEV usernames. -->
