@@ -85,7 +85,7 @@ Ultramarine can write diary paragraphs. Its accepted schema has no field for cha
 
 These checks verify the exercised behavior. They are not a general model-accuracy benchmark or proof against every prompt injection. The important protection is that generated text does not control game state.
 
-This is a solo submission. Codex assisted with implementation, testing and review; ImageGen created the visual concept and resident portrait. The interface and controls are native React, HTML and CSS.
+This is a solo submission. Codex assisted with implementation, testing, review and drafting this write-up; ImageGen created the visual concept and resident portrait. The interface and controls are native React, HTML and CSS.
 
 ## Why Does Open Innovation Matter?
 
